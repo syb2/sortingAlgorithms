@@ -1,15 +1,10 @@
-package con.yash.sorting;
+package com.yash.sorting;
 
 import java.util.Arrays;
 
-public class SelectionSort {
+public class SelectionSort implements Sort {
 
-    public enum SortingDirection {
-        ASCENDING,
-        DESCENDING
-    }
-
-    public static void sort(int[] inputArr, SortingDirection sortingDirection){
+    public void sort(int[] inputArr, SortingDirection sortingDirection){
 
         int inputArrLength =  inputArr.length;
 
@@ -36,15 +31,6 @@ public class SelectionSort {
                 inputArr[min_index] = temp;
             }
         }
-    }
-
-
-    public static void main(String[] args){
-        int[] intArr = new int[] {34,67,11,59,60,32};
-        sort(intArr,SortingDirection.ASCENDING);
-        System.out.println(Arrays.toString(intArr));
-        sort(intArr,SortingDirection.DESCENDING);
-        System.out.println(Arrays.toString(intArr));
     }
 }
 
